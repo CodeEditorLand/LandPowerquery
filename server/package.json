@@ -14,7 +14,7 @@
 	"dependencies": {},
 	"devDependencies": {
 		"@types/chai": "5.0.1",
-		"@types/node": "22.13.4",
+		"@types/node": "22.13.9",
 		"chai": "5.2.0",
 		"cross-env": "7.0.3",
 		"ts-loader": "9.5.2"

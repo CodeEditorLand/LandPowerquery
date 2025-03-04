@@ -11,7 +11,7 @@
 	},
 	"dependencies": {},
 	"devDependencies": {
-		"@types/node": "22.13.4",
+		"@types/node": "22.13.9",
 		"ts-loader": "9.5.2"
 	},
 	"issues": {
