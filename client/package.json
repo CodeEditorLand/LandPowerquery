@@ -1,6 +1,16 @@
 {
-	"dependencies": {},
+	"name": "@codeeditorland/powerquery-client",
 	"description": "VS Code part of language server",
+	"main": "lib\\extension",
+	"scripts": {
+		"build": ".\\node_modules\\.bin\\tsc",
+		"init": "npm install-clean",
+		"link:start": "npm link && npm uninstall @microsoft/powerquery-parser @microsoft/powerquery-language-services && git clean -xdf && npm install && npm link @microsoft/powerquery-parser @microsoft/powerquery-language-services",
+		"link:stop": "npm unlink @microsoft/powerquery-parser @microsoft/powerquery-language-services && git clean -xdf && npm install && npm install @microsoft/powerquery-parser@latest @microsoft/powerquery-language-services@latest --save-exact",
+		"webpack-dev": "node_modules\\.bin\\webpack --watch --mode development",
+		"webpack-prod": "node_modules\\.bin\\webpack --mode production"
+	},
+	"dependencies": {},
 	"devDependencies": {
 		"@types/chai": "5.0.1",
 		"@types/glob": "8.1.0",
@@ -12,15 +22,5 @@
 	},
 	"issues": {
 		"url": "https://github.com/microsoft/vscode-powerquery/issues"
-	},
-	"main": "lib\\extension",
-	"name": "@codeeditorland/powerquery-client",
-	"scripts": {
-		"build": ".\\node_modules\\.bin\\tsc",
-		"init": "npm install-clean",
-		"link:start": "npm link && npm uninstall @microsoft/powerquery-parser @microsoft/powerquery-language-services && git clean -xdf && npm install && npm link @microsoft/powerquery-parser @microsoft/powerquery-language-services",
-		"link:stop": "npm unlink @microsoft/powerquery-parser @microsoft/powerquery-language-services && git clean -xdf && npm install && npm install @microsoft/powerquery-parser@latest @microsoft/powerquery-language-services@latest --save-exact",
-		"webpack-dev": "node_modules\\.bin\\webpack --watch --mode development",
-		"webpack-prod": "node_modules\\.bin\\webpack --mode production"
 	}
 }
