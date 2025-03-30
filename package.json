@@ -1,7 +1,29 @@
 {
 	"name": "@codeeditorland/powerquery",
 	"displayName": "Power Query / M Language",
+	"version": "0.0.1",
+	"private": false,
 	"description": "Language service for the Power Query / M formula language",
+	"keywords": [
+		"codeeditorland",
+		"land",
+		"playform"
+	],
+	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/LandPowerquery#readme",
+	"bugs": {
+		"url": "HTTPS://GitHub.Com/CodeEditorLand/LandPowerquery/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+HTTPS://github.com/CodeEditorLand/LandPowerquery.git"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"author": {
+		"name": "Source 🖋️ Open 👐🏻",
+		"email": "Source/Open@Editor.Land",
+		"url": "HTTPS://Editor.Land"
+	},
+	"type": "module",
 	"main": "./client/dist/extension",
 	"types": "./client/dist/extension.d.ts",
 	"scripts": {
@@ -28,6 +50,7 @@
 		"link:stop:client": "cd client && npm run link:stop",
 		"link:stop:scripts": "cd scripts && npm run link:stop",
 		"link:stop:server": "cd server && npm run link:stop",
+		"prepublishOnly": "Build 'Source/**/*.ts'",
 		"test:client": "cd client && npm run test",
 		"test:server": "cd server && npm run test",
 		"version": "npm version patch && npm run version:client && npm run version:server && npm run version:scripts",
@@ -257,7 +280,12 @@
 	},
 	"activationEvents": [],
 	"dependencies": {},
-	"devDependencies": {},
+	"devDependencies": {
+		"@playform/build": "0.2.1"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
 	"icon": "imgs/PQIcon_256.png",
 	"capabilities": {
 		"untrustedWorkspaces": {
