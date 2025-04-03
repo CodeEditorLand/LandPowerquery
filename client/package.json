@@ -38,7 +38,7 @@
 		"@playform/build": "0.2.1",
 		"@types/chai": "5.2.1",
 		"@types/glob": "8.1.0",
-		"@types/node": "22.13.14",
+		"@types/node": "22.14.0",
 		"chai": "5.2.0",
 		"glob": "11.0.1",
 		"npm-check-updates": "17.1.16",
