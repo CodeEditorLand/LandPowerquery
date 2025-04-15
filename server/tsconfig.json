@@ -11,6 +11,7 @@
 	"include": [
 		"src/**/*.ts",
 		"src/library/standardLibrary.json",
+		"src",
 		"src"
 	]
 }
