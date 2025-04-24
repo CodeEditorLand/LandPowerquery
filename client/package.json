@@ -40,7 +40,7 @@
 		"@types/glob": "8.1.0",
 		"@types/node": "22.14.1",
 		"chai": "5.2.0",
-		"glob": "11.0.1",
+		"glob": "11.0.2",
 		"npm-check-updates": "18.0.0",
 		"ts-loader": "9.5.2"
 	},
