@@ -1,6 +1,28 @@
 {
 	"name": "@codeeditorland/powerquery-server",
+	"version": "0.0.1",
+	"private": false,
 	"description": "Power Query language server implementation.",
+	"keywords": [
+		"codeeditorland",
+		"land",
+		"playform"
+	],
+	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/LandPowerquery#readme",
+	"bugs": {
+		"url": "HTTPS://GitHub.Com/CodeEditorLand/LandPowerquery/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+HTTPS://github.com/CodeEditorLand/LandPowerquery.git"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"author": {
+		"name": "Source 🖋️ Open 👐🏻",
+		"email": "Source/Open@Editor.Land",
+		"url": "HTTPS://Editor.Land"
+	},
+	"type": "module",
 	"main": "lib\\server.d.ts",
 	"types": "lib\\server.d.ts",
 	"scripts": {
@@ -20,6 +42,9 @@
 		"chai": "5.2.0",
 		"cross-env": "7.0.3",
 		"ts-loader": "9.5.2"
+	},
+	"publishConfig": {
+		"access": "public"
 	},
 	"issues": {
 		"url": "https://github.com/microsoft/vscode-powerquery/issues"

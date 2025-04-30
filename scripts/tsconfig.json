@@ -16,6 +16,7 @@
 		"src/**/*.ts",
 		"../server/**/*.ts",
 		"src",
+		"src",
 		"src"
 	]
 }
