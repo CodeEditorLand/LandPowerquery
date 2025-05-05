@@ -1,0 +1,55 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "npm",
+            "script": "webpack-dev",
+            "path": "server/",
+            "group": "build",
+            "isBackground": true,
+            "problemMatcher": ["$ts-webpack-watch", "$tslint-webpack-watch"],
+            "label": "Webpack Server"
+        },
+        {
+            "type": "npm",
+            "script": "webpack-dev",
+            "path": "client/",
+            "group": "build",
+            "isBackground": true,
+            "problemMatcher": ["$ts-webpack-watch", "$tslint-webpack-watch"],
+            "label": "Webpack Client"
+        },
+        {
+            "type": "npm",
+            "script": "watch",
+            "path": "client/",
+            "group": "build",
+            "isBackground": true,
+            "problemMatcher": [
+                {
+                    "base": "$tsc-watch",
+                    "fileLocation": ["relative", "${workspaceFolder}/client/"]
+                }
+            ],
+            "label": "Build UI Tests"
+        },
+        {
+            "type": "npm",
+            "script": "watch",
+            "path": "server/",
+            "group": "build",
+            "isBackground": true,
+            "problemMatcher": [
+                {
+                    "base": "$tsc-watch",
+                    "fileLocation": ["relative", "${workspaceFolder}/server/"]
+                }
+            ],
+            "label": "Watch server unit tests"
+        },
+        {
+            "label": "Run Watchers",
+            "dependsOn": ["Webpack Server", "Webpack Client", "Build UI Tests", "Watch server unit tests"]
+        }
+    ]
+}

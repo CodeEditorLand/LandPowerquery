@@ -1,0 +1,51 @@
+// A launch configuration that compiles the extension and then opens it inside a new window
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "extensionHost",
+            "request": "launch",
+            "name": "Launch Client",
+            "runtimeExecutable": "${execPath}",
+            "args": ["--disable-extensions", "--extensionDevelopmentPath=${workspaceRoot}"],
+            "outFiles": ["${workspaceRoot}/client/dist/extension.js"],
+            "preLaunchTask": "Webpack Client"
+        },
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "Attach to Server",
+            "port": 6009,
+            "restart": true,
+            "sourceMaps": true,
+            "outFiles": ["${workspaceRoot}/server/dist/server.js"]
+        },
+        {
+            "name": "Language UI Test",
+            "type": "extensionHost",
+            "request": "launch",
+            "testConfiguration": "${workspaceFolder}/client/.vscode-test.js",
+            "args": ["--extensionDevelopmentPath=${workspaceRoot}"],
+            "sourceMaps": true,
+            "outFiles": ["${workspaceRoot}/client/lib/**/*.js"],
+            "internalConsoleOptions": "openOnSessionStart",
+            "preLaunchTask": "Run Watchers"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Run server unit tests",
+            "program": "${workspaceFolder}/server/node_modules/mocha/bin/_mocha",
+            "cwd": "${workspaceFolder}/server",
+            "args": ["--inspect", "--colors", "--timeout", "999999"],
+            "internalConsoleOptions": "openOnSessionStart"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Client + Server",
+            "configurations": ["Launch Client", "Attach to Server"],
+            "preLaunchTask": "Webpack Server"
+        }
+    ]
+}

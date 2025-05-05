@@ -1,18 +1,9 @@
 {
-	"compilerOptions": {
-		"baseUrl": "./",
-		"outDir": "Target",
-		"rootDir": "src"
-	},
-	"exclude": [
-		"node_modules"
-	],
-	"extends": "@playform/build/tsconfig",
-	"include": [
-		"src/**/*.ts",
-		"src/library/standardLibrary.json",
-		"src",
-		"src",
-		"src"
-	]
+    "extends": "../tsconfig.json",
+    "compilerOptions": {
+        "outDir": "lib",
+        "rootDir": "src"
+    },
+    "include": ["src/**/*.ts", "src/library/standardLibrary.json"],
+    "exclude": ["node_modules"]
 }

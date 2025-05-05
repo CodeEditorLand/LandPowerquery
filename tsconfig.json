@@ -1,32 +1,22 @@
 {
-	"compilerOptions": {
-		"baseUrl": "./",
-		"declaration": true,
-		"downlevelIteration": true,
-		"incremental": true,
-		"module": "commonjs",
-		"noEmitOnError": true,
-		"noFallthroughCasesInSwitch": true,
-		"noImplicitOverride": true,
-		"noImplicitReturns": true,
-		"noUnusedLocals": true,
-		"noUnusedParameters": true,
-		"outDir": "Target",
-		"resolveJsonModule": true,
-		"rootDir": "src",
-		"sourceMap": true,
-		"strict": true,
-		"target": "es6",
-		"tsBuildInfoFile": "./tsconfig.tsbuildinfo"
-	},
-	"exclude": [
-		"node_modules"
-	],
-	"extends": "@playform/build/tsconfig",
-	"include": [
-		"**/src/**/*.ts",
-		"src",
-		"src",
-		"src"
-	]
+    "compilerOptions": {
+        "declaration": true,
+        "downlevelIteration": true,
+        "incremental": true,
+        "module": "commonjs",
+        "noEmitOnError": true,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitOverride": true,
+        "noImplicitReturns": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "outDir": "lib",
+        "resolveJsonModule": true,
+        "sourceMap": true,
+        "strict": true,
+        "target": "es6",
+        "tsBuildInfoFile": "./tsconfig.tsbuildinfo"
+    },
+    "include": ["**/src/**/*.ts"],
+    "exclude": ["node_modules"]
 }
